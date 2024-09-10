@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField][Min(1)] private int pointPerCoin = 5;
+    [SerializeField] private GameObject player;
     private int currentScore;
     // Start is called before the first frame update
     void Awake()

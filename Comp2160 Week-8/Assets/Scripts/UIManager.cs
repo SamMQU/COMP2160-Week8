@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextMeshProUGUI scoreCounter = scorePanel.GetComponent<TextMeshProUGUI>();
-        scoreCounter.text = string.Format("Score: {0}", scoreKeeper.getScore());
+        //TextMeshProUGUI scoreCounter = scorePanel.GetComponent<TextMeshProUGUI>();
+//        scorePanel.text = string.Format("Score: {0}", scoreKeeper.getScore());
     }
 }
