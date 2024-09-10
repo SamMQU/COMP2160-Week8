@@ -12,7 +12,9 @@ public class Movement : MonoBehaviour
     void Awake()
     {
         actions = new PlayerMovement();
-        movementAction = actions.FindAction("Movement", throwIfNotFound: true);
+
+        var playerActionsMap = actions.asset.FindActionMap("PlayerActions", throwIfNotFound: true);
+        movementAction = playerActionsMap.FindAction("Movement", throwIfNotFound: true);
     }
 
     void OnEnable()
@@ -39,6 +41,7 @@ public class Movement : MonoBehaviour
         movementInput = Vector2.zero;
     }
 
+    // Update is called once per frame
     void Update()
     {
         Move();
